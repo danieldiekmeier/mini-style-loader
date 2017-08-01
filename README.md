@@ -12,6 +12,12 @@ So I set out to write a `mini-style-loader`, without any features – except put
 
 **For development, I'd still advise you to use `style-loader`**, but if you want/need a really small production bundle, I hope the `mini-style-loader` can help you.
 
+## Installation
+
+```
+npm install mini-style-loader
+```
+
 ## Usage
 
 You have to use it in combination with [`extract-loader`](https://github.com/peerigon/extract-loader). The `extract-loader` returns the pure CSS (without JavaScript wrappers from `css-loader`).
