@@ -32,6 +32,7 @@ const webpackConfig = {
     rules: [{
       test: /\.css$/,
       use: [
+        'babel-loader', // mini-style-loader returns ES6: Transpile it yourself if you want/need to.
         'mini-style-loader',
         'extract-loader',
         'css-loader'
