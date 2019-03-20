@@ -30,13 +30,12 @@ module.exports.pitch = function (request) {
     return `
       import apply from '${applyStylePath}'
 
-      // ExtractLoader handles getting the right source, but puts it in [0][1]
-      const source = require(${filePath})[0][1];
+      const source = require(${filePath}).toString();
 
       export default apply(source, ${hash})
 
       module.hot.accept(${filePath}, () => {
-        const source = require(${filePath})[0][1];
+        const source = require(${filePath}).toString();
         apply(source, ${hash})
       })
     `
